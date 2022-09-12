@@ -11,7 +11,12 @@
     p {
       padding:0 15px;
     }
-
+    img {
+      display:block;
+      margin:auto;
+      border-radius: 15px;
+      width: 100%;
+  }
   }
 
   .music-images {
@@ -47,7 +52,7 @@
     justify-content: center;
 
     .actual-text {
-      width: 50%;
+      width: 100%;
 
       h3 {
         margin-bottom: 10px;
@@ -58,6 +63,18 @@
       }
 
       .btn {
+        background-color: black; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 12px;
+      }
+      .btn:hover {
+        background-color: #1f7ea4;
       }
     }
 
@@ -73,3 +90,53 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .home {
+
+  
+    .music-images {
+      height: 100%;
+
+      .auricular{
+        width: 100%;
+        margin: 20px 2.5%;
+        border-radius: 20px;
+        height: 20rem;
+      }
+      .tecnologia{
+        display: none;
+      }
+      .ondas{
+        display: none;
+      }
+    }
+    
+}
+.actual {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .actual-text {
+    width: 100%;
+}
+.actual-img {
+  order: -2;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 4%;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+}
+
+}
+}
+
+
