@@ -169,44 +169,32 @@ p {
 nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 20px 50px;
-  background-color: #efeeed;
+  padding-top: 10px;
+  background-color: #F6F6F6;
+  border: 2px solid #F1F1F1;
 }
 nav h1 {
   font-size: 30px;
 }
-nav .container1 {
-  justify-content: center;
-}
-nav li {
-  flex: 1 1 100%;
-  list-style: none;
-  display: inline-block;
-  color: black;
-  padding: 10px 20px 0px 20px;
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
 }
 @media (max-width: 500px) {
-  nav {
-    margin-bottom: 10px;
-    padding: 20px 20px;
-    background-color: #efeeed;
+  nav ul {
+    width: 90%;
   }
-  nav h1 {
-    font-size: 30px;
-  }
-  nav .container1 {
-    justify-content: center;
-  }
-  nav li {
-    flex: 1 1 100%;
-    list-style: none;
-    display: inline-block;
-    color: black;
-    padding: 1px 5px 0px 5px;
-    gap: 20px;
-  }
+}
+nav a {
+  text-decoration: none;
+  color: #454A59;
+  font-weight: bold;
 }
 footer {
   color: #22283B;
@@ -225,107 +213,100 @@ footer {
   padding: 0 15px;
 }
 .home .intro img {
+  border-radius: 20px;
   display: block;
   margin: auto;
-  border-radius: 15px;
   width: 100%;
 }
 .home .music-images {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 .home .music-images img {
-  width: 28%;
-  margin: 20px 2.5%;
+  margin-top: 10;
   border-radius: 20px;
-  height: 100%;
 }
-.home .musica-nueva {
+@media (max-width: 500px) {
+  .home .music-images .auricular {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .music-images .tecnologia {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home .music-images .ondas {
+    display: none;
+  }
+}
+.musica-nueva {
   padding: 15px;
 }
-.home .musica-nueva h3 {
+.musica-nueva h3 {
   margin-top: 11px;
 }
-.home .musica-nueva p {
+.musica-nueva p {
   margin-top: 13px;
 }
-.home .actual {
+.actual {
   margin-top: 60px;
   border-top: 1px solid #dee2e6;
   padding: 50px 60px;
   display: flex;
   justify-content: center;
 }
-.home .actual .actual-text {
+@media (max-width: 500px) {
+  .actual {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 15%;
+  }
+}
+.actual .actual-text {
   width: 100%;
 }
-.home .actual .actual-text h3 {
+.actual .actual-text h3 {
   margin-bottom: 10px;
 }
-.home .actual .actual-text p {
+.actual .actual-text p {
   margin-bottom: 26px;
 }
-.home .actual .actual-text .btn {
-  background-color: black;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
+.actual .actual-text .btn {
+  background-color: #22283A;
+  color: #F6F6F6;
   display: inline-block;
-  font-size: 16px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 15px;
 }
-.home .actual .actual-text .btn:hover {
-  background-color: #1f7ea4;
+.actual .actual-text .btn:hover {
+  background-color: #F6F6F6;
+  color: #22283A;
+  cursor: pointer;
 }
-.home .actual .actual-img {
+@media (max-width: 500px) {
+  .actual .actual-text .btn {
+    width: 100%;
+  }
+}
+.actual .actual-img {
   width: 46%;
   margin-left: 4%;
 }
-.home .actual .actual-img img {
+@media (max-width: 500px) {
+  .actual .actual-img {
+    width: 100%;
+  }
+}
+.actual .actual-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}
-@media screen and (max-width: 500px) {
-  .home .music-images {
-    height: 100%;
-  }
-  .home .music-images .auricular {
-    width: 100%;
-    margin: 20px 2.5%;
-    border-radius: 20px;
-    height: 20rem;
-  }
-  .home .music-images .tecnologia {
-    display: none;
-  }
-  .home .music-images .ondas {
-    display: none;
-  }
-  .actual {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .actual .actual-text {
-    width: 100%;
-  }
-  .actual .actual-img {
-    order: -2;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-left: 4%;
-  }
-  .actual .actual-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
 }
 header {
   display: flex;
